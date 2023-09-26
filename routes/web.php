@@ -22,14 +22,6 @@ Route::get('/', function () {
     return redirect('/landing');
 });
 
-Route::get('/profil', function () {
-    return view('profile/index', [
-        "frist" => "Hello",
-        "name" => "Ridwan Yoga Permana",
-        "image" => "profil.png"
-    ]);
-});
-
 
 Route::get('/landing', [LandingController::class, 'index']);
 Route::get('/landing/profile', [ProfileController::class, 'index']);
